@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.navbar {
+	background-color: #454545;
+	border-radius: 0.075em;
+	cursor: default;
+	display: flex;
+	font-family: "RethinkSans-Medium", sans-serif;
+	justify-content: space-around;
+	padding: 1em 0;
+
+	.link a {
+		color: $accent-color;
+		margin: 0 1em;
+		text-decoration: none;
+		transition-duration: 300ms;
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&:active {
+			color: #ffffff;
+			opacity: .3;
+		}
+	}
+
+	.logo .icon {
+		color: $accent-color;
+		height: 1.6em;
+		margin-right: 0.5em;
+		vertical-align: middle;
+		width: 1.6em;
+	}
+
+	.logo p {
+		color: #ffffff;
+		display: inline;
+		font-size: 1.2em;
+		vertical-align: middle;
+
+		.pipe {
+			color: $accent-color;
+			margin: 0 .5em;
+
+			&::after {
+				content: "|";
+			}
+		}
+	}
+}

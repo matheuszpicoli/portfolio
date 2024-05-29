@@ -1,0 +1,42 @@
+.contact-layout {
+	display: flex;
+	flex-direction: column;
+
+	.contact {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		div {
+			word-break: break-all;
+			margin-bottom: 2em;
+
+			.contact-title {
+				text-align: center;
+			}
+
+			.contact-link {
+				text-decoration: none;
+				color: $accent-color;
+				margin-left: .5em;
+				font-style: italic;
+				transition-duration: 300ms;
+
+				&:hover {
+					opacity: .6;
+				}
+
+				&:active {
+					opacity: 1;
+				}
+			}
+
+			.icon {
+				width: 2em;
+				height: 2em;
+				vertical-align: middle;
+			}
+		}
+	}
+}

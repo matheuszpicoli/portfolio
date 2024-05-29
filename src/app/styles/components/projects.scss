@@ -1,0 +1,53 @@
+.project-layout {
+	display: flex;
+	flex-direction: column;
+
+	.project-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		word-break: break-all;
+
+		.project-list-title {
+			color: $accent-color;
+		}
+
+		.project-list-icon {
+			height: 5em;
+			margin-right: 1em;
+			width: 5em;
+		}
+
+		:is(.project-list-repository, .project-list-deploy, .project-list-description) {
+			font-size: .9em;
+
+			a {
+				color: $accent-color;
+				font-style: italic;
+				transition-duration: 300ms;
+
+				&:hover {
+					opacity: .6;
+				}
+
+				&:active {
+					opacity: 1;
+				}
+			}
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.adjustment {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

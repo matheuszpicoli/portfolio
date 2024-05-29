@@ -1,0 +1,11 @@
+@import "./styles/fonts.scss";
+@import "./styles/layout.scss";
+@import "./styles/navbar.scss";
+
+@import "./styles/components/home.scss";
+@import "./styles/components/projects.scss";
+@import "./styles/components/contact.scss";
+
+body {
+	background-color: #1c1c1c;
+}

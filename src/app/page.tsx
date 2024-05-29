@@ -1,95 +1,53 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+//- React
+import React from "react"
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+//- Next
+import Link from "next/link"
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+//- Styles
+import "./index.scss"
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+//- Icons
+import * as Icon from "../icons/reactIcons"
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+export default function HomePage() {
+	return (
+		<div className="main-layout">
+			<h1>Home</h1>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+			<div className="home-layout">
+				<section className="about">
+					<div className="about-image">
+						<img
+							className="profile"
+							src="./images/profilePicture.png"
+							alt="Foto de Matheus Picoli"
+						/>
+					</div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+					<div className="about-content">
+						<h2>Olá, sou Matheus Picoli.</h2>
+						<p>
+							Formado em Análise e Desenvolvimento de Sistemas, tenho experiência em construir aplicações web acessíveis que variam as suas utilidades, trazendo assim interfaces responsivas e funcionais.
+						</p>
+						<button className="projects-button">
+							<Link href="/projects">
+								Projetos
+								<Icon.Arrow className="icon" />
+							</Link>
+						</button>
+						<button className="contact-button">
+							<Link href="/contact">
+								Contato
+								<Icon.Arrow className="icon" />
+							</Link>
+						</button>
+					</div>
+				</section>
+
+				<section className="languages"></section>
+			</div>
+
+		</div>
+	)
 }

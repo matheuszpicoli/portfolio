@@ -1,1 +1,7 @@
 $accent-color: #16cec8;
+
+@mixin filter($property) {
+	-ms-filter: $property;
+	-webkit-filter: $property;
+	filter: $property;
+}

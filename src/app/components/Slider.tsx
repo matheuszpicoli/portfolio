@@ -4,7 +4,12 @@
 import Image, { StaticImageData } from "next/image"
 
 //- React
-import React, { useLayoutEffect, useState } from "react"
+import React from "react"
+
+//- React Slick
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 //- Style
 import "../../app/index.scss"
@@ -28,28 +33,43 @@ import TypeScript from "../../../public/images/language/TypeScript.png"
 import VueJS from "../../../public/images/language/VueJS.png"
 
 const languages: StaticImageData[] = [CSS, Git, Gulp, HTML, JavaScript, jQuery, MongoDB, MySQL, NextJS, NodeJS, Oracle, ReactJS, SCSS, TailwindCSS, TypeScript, VueJS]
+const languageName: string[] = ["CSS", "Git", "Gulp", "HTML", "JavaScript", "jQuery", "MongoDB", "MySQL", "Next JS", "Node JS", "Oracle", "React JS", "SCSS", "Tailwind CSS", "TypeScript", "Vue JS"]
 
-export default function Slider() {
-	const [currentImage, setCurrentImage] = useState<number>(0)
-
-	useLayoutEffect(() => {
-		const timer = setInterval(() => setCurrentImage(previousImage => (previousImage + 1) % languages.length), 1000)
-
-		return () => clearInterval(timer)
-	}, [])
+export default function LanguageSlider() {
+	const sliderSettings = {
+		dots: false,
+		infinite: true,
+		slidesToShow: 12,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1000
+	}
 
 	return (
 		<React.Fragment>
 			<h3 className="languages-title">Linguagens, libs e frameworks</h3>
-			<div className="languages-slider">
-				{languages.map((language, index) => (
-					<Image
-						key={index}
-						className="languages-images"
-						src={language}
-						alt={`Linguagem ${index}`}
-					/>
-				))}
+
+			<div className="languages-layout">
+				<Slider
+					{...sliderSettings}
+					className="languages-slider"
+				>
+					{languages.map((language, index) => (
+						<figure key={index}>
+							<div className="languages-figure-images-layout">
+								<Image
+									className="languages-images"
+									src={language}
+									alt={languageName[index]}
+									priority
+								/>
+								<figcaption className="languages-subtitle">
+									{languageName[index]}
+								</figcaption>
+							</div>
+						</figure>
+					))}
+				</Slider>
 			</div>
 		</React.Fragment>
 	)

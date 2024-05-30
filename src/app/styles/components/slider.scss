@@ -2,17 +2,41 @@
 	text-align: center;
 }
 
-.languages-slider {
-	align-items: center;
-	background-color: #ffffff15;
-	border-radius: 0.075em;
+.languages-layout {
 	display: flex;
-	height: 15vh;
 	justify-content: center;
+	align-items: center;
 
-	.languages-images {
-		height: 8vh;
-		object-fit: contain;
-		position: relative;
+	.languages-slider {
+		background-color: #ffffff10;
+		border-radius: 0;
+		border-top: 3px solid $accent-color;
+		padding: .5em;
+		width: 80vw;
+
+		figure {
+			margin: 0;
+			padding: 0;
+
+			.languages-figure-images-layout {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.languages-images {
+					@include filter(drop-shadow(2px 2px 5px #00000080));
+					height: 10vh;
+					object-fit: contain;
+					width: 10vw;
+				}
+
+				.languages-subtitle {
+					font-size: 12px;
+					font-family: "RethinkSans-SemiBoldItalic", sans-serif;
+					text-align: center;
+				}
+			}
+		}
 	}
 }

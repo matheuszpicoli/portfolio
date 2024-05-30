@@ -29,6 +29,7 @@ export default function HomePage() {
 							className="profile"
 							src={ProfilePicture}
 							alt="Foto de Matheus Picoli"
+							priority
 						/>
 					</div>
 

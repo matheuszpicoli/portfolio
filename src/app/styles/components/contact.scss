@@ -3,24 +3,24 @@
 	flex-direction: column;
 
 	.contact {
-		display: flex;
-		justify-content: center;
 		align-items: center;
+		display: flex;
 		flex-direction: column;
+		justify-content: center;
 
 		div {
-			word-break: break-all;
 			margin-bottom: 2em;
+			word-break: break-all;
 
 			.contact-title {
 				text-align: center;
 			}
 
 			.contact-link {
-				text-decoration: none;
 				color: $accent-color;
+				font-family: "RethinkSans-Italic", sans-serif;
 				margin-left: .5em;
-				font-style: italic;
+				text-decoration: none;
 				transition-duration: 300ms;
 
 				&:hover {
@@ -33,9 +33,9 @@
 			}
 
 			.icon {
-				width: 2em;
 				height: 2em;
 				vertical-align: middle;
+				width: 2em;
 			}
 		}
 	}

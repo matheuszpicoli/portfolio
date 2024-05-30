@@ -3,9 +3,9 @@
 }
 
 .languages-layout {
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 
 	.languages-slider {
 		background-color: #ffffff10;
@@ -19,10 +19,10 @@
 			padding: 0;
 
 			.languages-figure-images-layout {
+				align-items: center;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				align-items: center;
 
 				.languages-images {
 					@include filter(drop-shadow(2px 2px 5px #00000080));
@@ -32,8 +32,9 @@
 				}
 
 				.languages-subtitle {
-					font-size: 12px;
 					font-family: "RethinkSans-SemiBoldItalic", sans-serif;
+					font-size: 12px;
+					margin-top: 1em;
 					text-align: center;
 				}
 			}

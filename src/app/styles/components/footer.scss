@@ -1,0 +1,28 @@
+.footer {
+	background-color: #454545;
+	border-radius: 0.075em;
+	color: #ffffff;
+	cursor: default;
+	display: flex;
+	font-family: "RethinkSans-Regular", sans-serif;
+	justify-content: center;
+	margin-top: 2em;
+
+	.footer-text {
+		font-size: 14px;
+		line-height: 1.5em;
+		padding: .5em;
+		text-align: center;
+
+		.footer-link {
+			color: $accent-color;
+			font-family: "RethinkSans-Bold", sans-serif;
+			text-decoration: none;
+			transition-duration: 300ms;
+
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+}

@@ -31,12 +31,12 @@
 			}
 
 			:is(.projects-button, .contact-button) {
-				padding: .5em;
-				font-size: 1em;
-				font-weight: bold;
-				border: 2px solid $accent-color;
-				border-radius: 0.075em;
 				background-color: transparent;
+				border-radius: 0.075em;
+				border: 2px solid $accent-color;
+				font-family: "RethinkSans-Bold", sans-serif;
+				font-size: 1em;
+				padding: .5em;
 
 				a {
 					color: $accent-color;

@@ -18,12 +18,12 @@
 			width: 5em;
 		}
 
-		:is(.project-list-repository, .project-list-deploy, .project-list-description) {
+		:is(.project-list-deploy, .project-list-description, .project-list-repository) {
 			font-size: .9em;
 
 			a {
 				color: $accent-color;
-				font-style: italic;
+				font-family: "RethinkSans-Italic", sans-serif;
 				transition-duration: 300ms;
 
 				&:hover {
@@ -37,7 +37,7 @@
 		}
 
 		.bold {
-			font-weight: bold;
+			font-family: "RethinkSans-Bold", sans-serif;
 		}
 
 		.adjustment {

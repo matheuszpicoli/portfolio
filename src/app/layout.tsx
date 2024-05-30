@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 
 //- Components
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
 	title: "Matheus Zanela Picoli",
@@ -18,7 +19,12 @@ export default function RootLayout({
 		<html lang="pt-br">
 			<body>
 				<Header />
-				<main>{children}</main>
+
+				<main>
+					{children}
+				</main>
+
+				<Footer />
 			</body>
 		</html>
 	)

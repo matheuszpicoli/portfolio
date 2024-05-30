@@ -6,6 +6,7 @@ import "../index.scss"
 
 //- Icons
 import { IconType } from "react-icons"
+import * as Icon from "../../icons/reactIcons"
 
 interface ContactProps {
 	contact: string
@@ -31,6 +32,7 @@ export default function Contact<T extends ContactProps>(props: T) {
 				rel={props.newTab ? "noreferrer noopener nofollow" : ""}
 			>
 				{props.text ? props.text : props.link}
+				<Icon.Arrow className="contact-link-icon" />
 			</a>
 		</div>
 	)

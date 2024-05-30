@@ -48,7 +48,13 @@
 					}
 
 					&:hover {
-						opacity: .6;
+						color: #ffffff;
+						opacity: .5;
+
+						.icon {
+							@include transform(translate(3px, -3px));
+							transition: transform 150ms ease-in-out;
+						}
 					}
 				}
 

@@ -25,11 +25,21 @@
 
 				&:hover {
 					opacity: .6;
+
+					.contact-link-icon {
+						@include transform(translate(5px, -5px));
+						transition: transform 150ms ease-in-out;
+					}
 				}
 
 				&:active {
 					opacity: 1;
 				}
+			}
+
+			.contact-link-icon {
+				color: #ffffff;
+				margin-left: 5px;
 			}
 
 			.icon {

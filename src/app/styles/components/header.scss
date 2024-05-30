@@ -18,7 +18,7 @@
 				transition-duration: 200ms;
 
 				&:hover {
-					color: #ffffff;
+					color: $white;
 				}
 			}
 		}
@@ -32,19 +32,67 @@
 		width: 1.6em;
 	}
 
-	.logo p {
-		color: #ffffff;
-		display: inline;
-		font-size: 1.2em;
-		vertical-align: middle;
+	.logo {
+		p {
+			color: $white;
+			display: inline;
+			font-size: 1.2em;
+			vertical-align: middle;
 
-		.pipe {
-			color: $accent-color;
-			margin: 0 .5em;
+			.pipe {
+				color: $accent-color;
+				margin: 0 .5em;
 
-			&::after {
-				content: "|";
+				&::after {
+					content: "|";
+				}
 			}
+		}
+	}
+}
+
+@media (min-width: 615px) {
+	.navbar {
+		.hamburger-menu {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 615px) {
+	.link {
+		display: none;
+	}
+
+	.navbar {
+		.logo {
+			p {
+				font-size: 1em;
+			}
+		}
+
+		.hamburger-menu {
+			cursor: pointer;
+			display: block;
+
+			:is(.close-icon, .hamburger-icon) {
+				color: $accent-color;
+				height: 1.5em;
+				transition-duration: 300ms;
+				vertical-align: middle;
+				width: 1.5em;
+
+				&:active {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.navbar {
+		.link.hamburger-link {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 }

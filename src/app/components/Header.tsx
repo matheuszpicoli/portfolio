@@ -1,5 +1,8 @@
 "use client"
 
+//- React
+import React, { useState } from "react"
+
 //- Next
 import Link, { LinkProps } from "next/link"
 import { usePathname } from "next/navigation"
@@ -40,6 +43,10 @@ const CurrentLink = ({ href, children, ...params }: CurrentLinkProps) => {
 }
 
 export default function Header() {
+	const [isHamburgerLinkActive, setHamburgerLinkActive] = useState<boolean>(false)
+
+	const toogleHamburgerMenu = () => setHamburgerLinkActive(!isHamburgerLinkActive)
+
 	return (
 		<header>
 			<nav className="navbar">
@@ -47,7 +54,10 @@ export default function Header() {
 					<Icon.Code className="icon" />
 					<p>Matheus Picoli<span className="pipe"></span>Web Developer</p>
 				</div>
-				<div className="link">
+				<div className={`
+					link
+					${isHamburgerLinkActive ? "hamburger-link" : ""}
+				`}>
 					<CurrentLink href="/">
 						Home
 					</CurrentLink>
@@ -57,6 +67,17 @@ export default function Header() {
 					<CurrentLink href="/contact">
 						Contato
 					</CurrentLink>
+				</div>
+				<div
+					className="hamburger-menu"
+					onClick={toogleHamburgerMenu}
+				>
+					{!isHamburgerLinkActive && (
+						<Icon.HamburgerMenu className="hamburger-icon" />
+					)}
+					{isHamburgerLinkActive && (
+						<Icon.Close className="close-icon" />
+					)}
 				</div>
 			</nav>
 		</header>

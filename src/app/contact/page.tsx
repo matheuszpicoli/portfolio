@@ -34,6 +34,14 @@ export default function ContactPage() {
 						icon={Icon.Mail}
 						link="mailto:matheuspicoli2011@gmail.com"
 						newTab={false}
+						text="matheuspicoli2011@gmail.com"
+					/>
+
+					<Contact
+						contact="Currículo"
+						icon={Icon.Pdf}
+						link="./pdf/Currículo.pdf"
+						text="Clique aqui para visualizar meu currículo"
 					/>
 				</section>
 			</div>

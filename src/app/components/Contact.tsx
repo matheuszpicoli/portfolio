@@ -12,6 +12,7 @@ interface ContactProps {
 	icon: IconType
 	link: string
 	newTab?: boolean
+	text?: string
 }
 
 Contact.defaultProps = {
@@ -29,7 +30,7 @@ export default function Contact<T extends ContactProps>(props: T) {
 				target={props.newTab ? "_blank" : "_self"}
 				rel={props.newTab ? "noreferrer noopener nofollow" : ""}
 			>
-				{props.link}
+				{props.text ? props.text : props.link}
 			</a>
 		</div>
 	)

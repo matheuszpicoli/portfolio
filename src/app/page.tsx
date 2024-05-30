@@ -3,12 +3,19 @@ import React from "react"
 
 //- Next
 import Link from "next/link"
+import Image from "next/image"
 
 //- Styles
 import "./index.scss"
 
+//- Components
+import Slider from "./components/Slider"
+
 //- Icons
 import * as Icon from "../icons/reactIcons"
+
+//- Images
+import ProfilePicture from "../../public/images/profile/profilePicture.png"
 
 export default function HomePage() {
 	return (
@@ -18,9 +25,9 @@ export default function HomePage() {
 			<div className="home-layout">
 				<section className="about">
 					<div className="about-image">
-						<img
+						<Image
 							className="profile"
-							src="./images/profilePicture.png"
+							src={ProfilePicture}
 							alt="Foto de Matheus Picoli"
 						/>
 					</div>
@@ -45,7 +52,9 @@ export default function HomePage() {
 					</div>
 				</section>
 
-				<section className="languages"></section>
+				<section className="languages">
+					<Slider />
+				</section>
 			</div>
 
 		</div>

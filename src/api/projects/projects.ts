@@ -1,7 +1,6 @@
-
 //- React Icons
 import * as Icon from "../../icons/reactIcons"
-import { IconType } from 'react-icons';
+import { IconType } from "react-icons"
 
 type Project = {
 	id: number

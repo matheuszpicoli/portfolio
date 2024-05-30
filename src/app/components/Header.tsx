@@ -14,11 +14,7 @@ type CurrentLinkProps = {
 	children: React.ReactNode
 } & LinkProps
 
-const CurrentLink = ({
-	href,
-	children,
-	...params
-}: CurrentLinkProps) => {
+const CurrentLink = ({ href, children, ...params }: CurrentLinkProps) => {
 	const pathname = usePathname()
 
 	const isCurrentPath =

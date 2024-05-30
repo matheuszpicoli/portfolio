@@ -7,19 +7,20 @@
 	justify-content: space-around;
 	padding: 1em 0;
 
-	.link a {
-		color: $accent-color;
-		margin: 0 1em;
-		text-decoration: none;
-		transition-duration: 300ms;
+	.link {
+		a {
+			color: $accent-color;
+			margin: 0 1em;
+			text-decoration: none;
+			transition-duration: 300ms;
 
-		&:hover {
-			opacity: .7;
-		}
+			.nav-link {
+				transition-duration: 200ms;
 
-		&:active {
-			color: #ffffff;
-			opacity: .3;
+				&:hover {
+					color: #ffffff;
+				}
+			}
 		}
 	}
 

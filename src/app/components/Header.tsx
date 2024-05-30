@@ -32,7 +32,9 @@ const CurrentLink = ({ href, children, ...params }: CurrentLinkProps) => {
 				opacity: `${isCurrentPath ? "0.3" : "1"}`
 			}}
 		>
-			{children}
+			<span className="nav-link">
+				{children}
+			</span>
 		</Link>
 	)
 }

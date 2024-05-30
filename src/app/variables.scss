@@ -1,7 +1,31 @@
+//? Variables
 $accent-color: #16cec8;
 
+//? Mixins
 @mixin filter($property) {
 	-ms-filter: $property;
 	-webkit-filter: $property;
 	filter: $property;
+}
+
+@mixin transform($property) {
+	-moz-transform: $property;
+	-ms-transform: $property;
+	-o-transform: $property;
+	-webkit-transform: $property;
+	transform: $property;
+}
+
+@mixin keyframes($animation) {
+	@-moz-keyframes #{$animation} {
+		@content;
+	}
+
+	@-webkit-keyframes #{$animation} {
+		@content;
+	}
+
+	@keyframes #{$animation} {
+		@content;
+	}
 }

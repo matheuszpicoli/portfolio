@@ -4,7 +4,7 @@
 import Image, { StaticImageData } from "next/image"
 
 //- React
-import React from "react"
+import React, { useState, useLayoutEffect } from "react"
 
 //- React Slick
 import Slider from "react-slick"
@@ -15,32 +15,46 @@ import "slick-carousel/slick/slick-theme.css"
 import "../../app/index.scss"
 
 //- Languages Images
-import CSS from "../../../public/images/language/CSS.png"
-import Git from "../../../public/images/language/Git.png"
-import Gulp from "../../../public/images/language/Gulp.png"
-import HTML from "../../../public/images/language/HTML.png"
-import JavaScript from "../../../public/images/language/JavaScript.png"
-import jQuery from "../../../public/images/language/jQuery.png"
-import MongoDB from "../../../public/images/language/MongoDB.png"
-import MySQL from "../../../public/images/language/MySQL.png"
-import NextJS from "../../../public/images/language/NextJS.png"
-import NodeJS from "../../../public/images/language/NodeJS.png"
-import Oracle from "../../../public/images/language/Oracle.png"
-import ReactJS from "../../../public/images/language/ReactJS.png"
-import SCSS from "../../../public/images/language/SCSS.png"
-import TailwindCSS from "../../../public/images/language/TailwindCSS.png"
-import TypeScript from "../../../public/images/language/TypeScript.png"
-import VueJS from "../../../public/images/language/VueJS.png"
+import CSSLogo from "../../../public/images/language/CSS.png"
+import GitLogo from "../../../public/images/language/Git.png"
+import GulpLogo from "../../../public/images/language/Gulp.png"
+import HTMLLogo from "../../../public/images/language/HTML.png"
+import JavaScriptLogo from "../../../public/images/language/JavaScript.png"
+import jQueryLogo from "../../../public/images/language/jQuery.png"
+import MongoDBLogo from "../../../public/images/language/MongoDB.png"
+import MySQLLogo from "../../../public/images/language/MySQL.png"
+import NextJSLogo from "../../../public/images/language/NextJS.png"
+import NodeJSLogo from "../../../public/images/language/NodeJS.png"
+import OracleLogo from "../../../public/images/language/Oracle.png"
+import ReactJSLogo from "../../../public/images/language/ReactJS.png"
+import SCSSLogo from "../../../public/images/language/SCSS.png"
+import TailwindCSSLogo from "../../../public/images/language/TailwindCSS.png"
+import TypeScriptLogo from "../../../public/images/language/TypeScript.png"
+import VueJSLogo from "../../../public/images/language/VueJS.png"
 
-const languages: StaticImageData[] = [CSS, Git, Gulp, HTML, JavaScript, jQuery, MongoDB, MySQL, NextJS, NodeJS, Oracle, ReactJS, SCSS, TailwindCSS, TypeScript, VueJS]
+const languages: StaticImageData[] = [CSSLogo, GitLogo, GulpLogo, HTMLLogo, JavaScriptLogo, jQueryLogo, MongoDBLogo, MySQLLogo, NextJSLogo, NodeJSLogo, OracleLogo, ReactJSLogo, SCSSLogo, TailwindCSSLogo, TypeScriptLogo, VueJSLogo]
 const languageName: string[] = ["CSS", "Git", "Gulp", "HTML", "JavaScript", "jQuery", "MongoDB", "MySQL", "Next JS", "Node JS", "Oracle", "React JS", "SCSS", "Tailwind CSS", "TypeScript", "Vue JS"]
 
 export default function LanguageSlider() {
+	const [numberOfSlides, setNumberOfSlides] = useState<number>(12)
+
+	useLayoutEffect(() => {
+		const handleResize = () => {
+			if (window.matchMedia("(max-width: 615px)").matches) setNumberOfSlides(6)
+		}
+
+		window.addEventListener("resize", handleResize)
+		handleResize()
+
+		return () => window.removeEventListener("resize", handleResize)
+	}, [])
+
 	const sliderSettings = {
 		dots: false,
 		infinite: true,
-		slidesToShow: 12,
+		slidesToShow: numberOfSlides,
 		slidesToScroll: 1,
+		draggable: false,
 		autoplay: true,
 		autoplaySpeed: 1000
 	}

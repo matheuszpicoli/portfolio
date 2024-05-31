@@ -64,6 +64,18 @@
 		display: none;
 	}
 
+	.blur {
+		@include backdrop-fiter(blur(5px));
+		background: #00000080;
+		height: 100vh;
+		left: 0;
+		pointer-events: none;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		z-index: 5;
+	}
+
 	.navbar {
 		.logo {
 			p {
@@ -82,17 +94,45 @@
 				vertical-align: middle;
 				width: 1.5em;
 
-				&:active {
+				&:hover {
 					color: $white;
 				}
 			}
 		}
-	}
 
-	.navbar {
-		.link.hamburger-link {
+		.aside-navbar {
+			background-color: #2d2d2d;
+			border-left: 5px dashed #454545;
+			cursor: default;
 			display: flex;
 			flex-direction: column;
+			height: 100vh;
+			justify-content: center;
+			padding: 10px;
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 35vw;
+			z-index: 10;
+
+			.aside-icon {
+				cursor: pointer;
+				position: absolute;
+				right: 1em;
+				top: 1em;
+			}
+
+			a {
+				color: $accent-color;
+				margin: 2em 0;
+				text-align: center;
+				text-decoration: none;
+				transition-duration: 300ms;
+
+				&:hover {
+					color: $white;
+				}
+			}
 		}
 	}
 }

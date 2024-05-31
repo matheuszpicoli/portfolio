@@ -43,21 +43,25 @@ const CurrentLink = ({ href, children, ...params }: CurrentLinkProps) => {
 }
 
 export default function Header() {
-	const [isHamburgerLinkActive, setHamburgerLinkActive] = useState<boolean>(false)
+	const [isHamburgerMenuVisible, setHamburgerMenuVisible] = useState<boolean>(false)
+	const [isInBlur, setInBlur] = useState<boolean>(false)
 
-	const toogleHamburgerMenu = () => setHamburgerLinkActive(!isHamburgerLinkActive)
+	const toogleHamburgerMenu = () => {
+		setHamburgerMenuVisible(!isHamburgerMenuVisible)
+		setInBlur(!isInBlur)
+	}
 
 	return (
 		<header>
 			<nav className="navbar">
+
 				<div className="logo">
-					<Icon.Code className="icon" />
-					<p>Matheus Picoli<span className="pipe"></span>Web Developer</p>
+					<Link href="/">
+						<Icon.Code className="icon" />
+						<p>Matheus Picoli<span className="pipe"></span>Web Developer</p>
+					</Link>
 				</div>
-				<div className={`
-					link
-					${isHamburgerLinkActive ? "hamburger-link" : ""}
-				`}>
+				<div className="link">
 					<CurrentLink href="/">
 						Home
 					</CurrentLink>
@@ -68,17 +72,53 @@ export default function Header() {
 						Contato
 					</CurrentLink>
 				</div>
-				<div
-					className="hamburger-menu"
-					onClick={toogleHamburgerMenu}
-				>
-					{!isHamburgerLinkActive && (
+
+				{!isHamburgerMenuVisible && (
+					<div className="hamburger-menu">
+						<Icon.HamburgerMenu
+							className="hamburger-icon"
+							onClick={toogleHamburgerMenu}
+						/>
+					</div>
+				)}
+				{(isHamburgerMenuVisible && isInBlur) && (
+					<div className="hamburger-menu">
 						<Icon.HamburgerMenu className="hamburger-icon" />
-					)}
-					{isHamburgerLinkActive && (
-						<Icon.Close className="close-icon" />
-					)}
-				</div>
+
+						<div className="blur"></div>
+
+						<div className="aside-navbar">
+
+							<div className="aside-icon">
+								<Icon.Close
+									className="close-icon"
+									onClick={toogleHamburgerMenu}
+								/>
+							</div>
+
+							<CurrentLink
+								href="/"
+								onClick={toogleHamburgerMenu}
+							>
+								Home
+							</CurrentLink>
+							<CurrentLink
+								href="/projects"
+								onClick={toogleHamburgerMenu}
+							>
+								Projetos
+							</CurrentLink>
+							<CurrentLink
+								href="/contact"
+								onClick={toogleHamburgerMenu}
+							>
+								Contato
+							</CurrentLink>
+						</div>
+
+					</div>
+				)}
+
 			</nav>
 		</header>
 	)

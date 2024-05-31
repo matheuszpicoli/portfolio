@@ -9,6 +9,11 @@ $white: #ffffff;
 	filter: $property;
 }
 
+@mixin backdrop-fiter($property) {
+	-webkit-backdrop-filter: $property;
+	backdrop-filter: $property;
+}
+
 @mixin transform($property) {
 	-moz-transform: $property;
 	-ms-transform: $property;

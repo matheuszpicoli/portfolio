@@ -18,3 +18,8 @@ body {
 	font-family: "RethinkSans-Bold", sans-serif;
 	font-style: normal;
 }
+
+*::selection {
+	background-color: $accent-color;
+	color: #000000;
+}

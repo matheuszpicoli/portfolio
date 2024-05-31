@@ -12,6 +12,7 @@
 				clip-path: polygon(100% 0%, 100% 0%, 100% 80%, 100% 80%, 80% 100%, 80% 100%, 0% 100%, 0% 100%, 0% 20%, 0% 20%, 20% 0%, 20% 0%);
 				height: 50vh;
 				object-fit: cover;
+				transition-duration: 300ms;
 				width: 25vw;
 			}
 		}
@@ -30,7 +31,7 @@
 				font-size: 1em;
 			}
 
-			:is(.projects-button, .contact-button) {
+			:where(.projects-button, .contact-button) {
 				background-color: transparent;
 				border-radius: 0.075em;
 				border: 2px solid $accent-color;
@@ -60,8 +61,27 @@
 
 			}
 
+			.projects-button {
+				&.fade-in {
+					@include animation(fade ease 1000ms);
+				}
+			}
+
 			.contact-button {
 				margin-left: 1em;
+
+				&.fade-in {
+					@include animation(fade ease 1500ms);
+				}
+			}
+
+			.cursor {
+				@include animation(blink linear 800ms infinite);
+				background-color: $accent-color;
+				display: inline-block;
+				height: 1em;
+				margin-left: 5px;
+				width: 2.5px;
 			}
 		}
 	}
@@ -72,5 +92,29 @@
 		.about-content {
 			font-size: 12px;
 		}
+	}
+}
+
+@include keyframes(fade) {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@include keyframes(blink) {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }

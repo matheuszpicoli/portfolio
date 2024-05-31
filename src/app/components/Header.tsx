@@ -56,10 +56,8 @@ export default function Header() {
 			<nav className="navbar">
 
 				<div className="logo">
-					<Link href="/">
-						<Icon.Code className="icon" />
-						<p>Matheus Picoli<span className="pipe"></span>Web Developer</p>
-					</Link>
+					<Icon.Code className="icon" />
+					<p>Matheus Picoli<span className="pipe"></span>Web Developer</p>
 				</div>
 				<div className="link">
 					<CurrentLink href="/">

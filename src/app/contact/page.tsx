@@ -31,7 +31,7 @@ export default function ContactPage() {
 
 					<Contact
 						contact="E-mail"
-						icon={Icon.Mail}
+						icon={Icon.Email}
 						link="mailto:matheuspicoli2011@gmail.com"
 						newTab={false}
 						text="matheuspicoli2011@gmail.com"

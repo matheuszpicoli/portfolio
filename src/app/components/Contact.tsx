@@ -29,9 +29,9 @@ export default function Contact<T extends ContactProps>(props: T) {
 				className="contact-link"
 				href={props.link}
 				target={props.newTab ? "_blank" : "_self"}
-				rel={props.newTab ? "noreferrer noopener nofollow" : ""}
+				rel={props.newTab ? "noreferrer noopener nofollow" : undefined}
 			>
-				{props.text ? props.text : props.link}
+				{props.text || props.link}
 				<Icon.Arrow className="contact-link-icon" />
 			</a>
 		</div>

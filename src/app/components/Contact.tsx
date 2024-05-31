@@ -26,7 +26,7 @@ export default function Contact<T extends ContactProps>(props: T) {
 			<h3 className="contact-title">{props.contact}</h3>
 			<props.icon className="icon" />
 			<a
-				className="contact-link"
+				className="contact-link fade-link"
 				href={props.link}
 				target={props.newTab ? "_blank" : "_self"}
 				rel={props.newTab ? "noreferrer noopener nofollow" : undefined}

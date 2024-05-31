@@ -3,13 +3,19 @@
 	flex-direction: column;
 
 	.highlighted {
-		font-size: 1.5em;
-		font-family: "RethinkSans-ExtraBold", sans-serif;
+		p {
+			@include animation(appear ease 1000ms, underline ease 1000ms 1000ms forwards);
+			background-image: linear-gradient(to right, currentColor, $accent-color);
+			background-position: 0 100%;
+			background-repeat: no-repeat;
+			background-size: 0;
+			font-size: 1.5em;
 
-		.different-letter {
-			@include transform(rotate(323deg));
-			color: $accent-color;
-			display: inline-block;
+			.different-letter {
+				@include animation(rotate-letter ease 1500ms forwards);
+				color: $accent-color;
+				display: inline-block;
+			}
 		}
 	}
 
@@ -29,7 +35,7 @@
 			width: 5em;
 		}
 
-		:is(.project-list-deploy, .project-list-description, .project-list-repository) {
+		:where(.project-list-deploy, .project-list-description, .project-list-repository) {
 			font-size: .9em;
 
 			a {
@@ -89,5 +95,45 @@
 			margin-top: 2em;
 			text-align: center;
 		}
+	}
+}
+
+@include keyframes(appear) {
+	from {
+		@include transform(translateX(45vw));
+	}
+
+	to {
+		@include transform(translateX(0));
+	}
+}
+
+@include keyframes(underline) {
+	from {
+		background-size: 0 2px;
+	}
+
+	to {
+		background-size: 100vw 2px;
+	}
+}
+
+@include keyframes(rotate-letter) {
+	from {
+		@include transform(rotate(0));
+	}
+
+	to {
+		@include transform(rotate(310deg));
+	}
+}
+
+@include keyframes(fade-projects) {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }

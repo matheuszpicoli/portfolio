@@ -61,8 +61,8 @@ export default function HomePage() {
 					<div className="about-image">
 						<Image
 							style={{
-								"filter": `${showButton ? "grayscale(0)" : "grayscale(1)"}`,
-								"opacity": `${showButton ? "1" : "0.2"}`
+								filter: `${showButton ? "grayscale(0)" : "grayscale(1)"}`,
+								opacity: `${showButton ? 1 : 0.2}`
 							}}
 							className="profile"
 							src={ProfilePicture}
@@ -78,12 +78,9 @@ export default function HomePage() {
 							<span className="cursor"></span>
 						</p>
 						<button
-							className={`
-								${showButton ? "fade-in" : ""}
-								projects-button
-							`}
+							className={`projects-button ${showButton ? "fade-in" : ""}`}
 							style={{
-								"opacity": `${!showButton ? "0" : "1"}`
+								opacity: `${!showButton ? 0 : 1}`
 							}}
 						>
 							<Link href="/projects">
@@ -92,12 +89,9 @@ export default function HomePage() {
 							</Link>
 						</button>
 						<button
-							className={`
-								${showButton ? "fade-in" : ""}
-								contact-button
-							`}
+							className={`contact-button ${showButton ? "fade-in" : ""}`}
 							style={{
-								"opacity": `${!showButton ? "0" : "1"}`
+								opacity: `${!showButton ? 0 : 1}`
 							}}
 						>
 							<Link href="/contact">

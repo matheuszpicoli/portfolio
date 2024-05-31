@@ -22,12 +22,12 @@ $white: #ffffff;
 	transform: $property;
 }
 
-@mixin animation($property) {
-	-moz-animation: $property;
-	-ms-animation: $property;
-	-o-animation: $property;
-	-webkit-animation: $property;
-	animation: $property;
+@mixin animation($properties...) {
+	-moz-animation: $properties;
+	-ms-animation: $properties;
+	-o-animation: $properties;
+	-webkit-animation: $properties;
+	animation: $properties;
 }
 
 @mixin keyframes($animation) {

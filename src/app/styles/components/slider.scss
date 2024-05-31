@@ -33,11 +33,17 @@
 
 				.languages-subtitle {
 					font-family: "RethinkSans-SemiBoldItalic", sans-serif;
-					font-size: 12px;
+					font-size: 10px;
 					margin-top: 1em;
 					text-align: center;
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 615px) {
+	.languages-title {
+		font-size: 1em;
 	}
 }

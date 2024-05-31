@@ -50,3 +50,20 @@
 		}
 	}
 }
+
+@media (max-width: 615px) {
+	.contact-layout {
+		.contact {
+			div {
+				.contact-link {
+					font-size: 14px;
+				}
+
+				.icon {
+					height: 1em;
+					width: 1em;
+				}
+			}
+		}
+	}
+}

@@ -15,8 +15,8 @@ Aqui podemos visualizar minhas principais redes sociais profissionais, incluindo
 
 ## Redes Sociais
 
-[LinkedIn](https://www.linkedin.com/in/matheus-zpicoli) - Meu LinkedIn pessoal
+- [LinkedIn](https://www.linkedin.com/in/matheus-zpicoli) - Meu LinkedIn pessoal
 
-[GitHub](https://github.com/matheuszpicoli) - Meu GitHub
+- [GitHub](https://github.com/matheuszpicoli) - Meu GitHub
 
-[E-mail](mailto:matheuspicoli2011@gmail.com) - Meu e-mail de contato
+- [E-mail](mailto:matheuspicoli2011@gmail.com) - Meu e-mail de contato

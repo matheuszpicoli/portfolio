@@ -1,6 +1,7 @@
 //- React Icons
 export { BsFillRocketFill as Spaceship } from "react-icons/bs"
 export { FaFilePdf as Pdf } from "react-icons/fa"
+export { FaUserAstronaut as Chatbot } from "react-icons/fa"
 export { HiMenu as HamburgerMenu } from "react-icons/hi"
 export { IoCloseSharp as Close } from "react-icons/io5"
 export { IoFastFoodOutline as Burger } from "react-icons/io5"

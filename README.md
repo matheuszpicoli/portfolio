@@ -1,22 +1,22 @@
-# Portfolio 📊
+# Portfólio 📊
 
-This is my personal portfolio, where I put my main skills and objectives.
+Este é o meu portfólio pessoal, onde coloco minhas principais competências e objetivos.
 
-### We have 3 (three) sections:
+### Temos 3 (três) seções:
 
 #### Home
-In this section, it is where I introduce myself and show the main technologies and libraries that I use most in my daily life.
+Nesta seção é onde me apresento e mostro as principais tecnologias e bibliotecas que mais utilizo no meu dia a dia.
 
-#### Projects
-This is where I show the main projects that I see highlighted, where I dedicated the most hours and made a lot of commits.
+#### Projetos
+É aqui que mostro os principais projetos que vejo em destaque, onde dediquei mais horas e fiz muitos commits.
 
-#### Contact
-Here we can view my main professional social networks, including my CV.
+#### Contato
+Aqui podemos visualizar minhas principais redes sociais profissionais, incluindo meu currículo.
 
-## Social Medias
+## Redes Sociais
 
-[LinkedIn](https://www.linkedin.com/in/matheus-zpicoli) - My personal LinkedIn
+- [LinkedIn](https://www.linkedin.com/in/matheus-zpicoli) - Meu LinkedIn pessoal
 
-[GitHub](https://github.com/matheuszpicoli) - My GitHub
+- [GitHub](https://github.com/matheuszpicoli) - Meu GitHub
 
-[Email](mailto:matheuspicoli2011@gmail.com) - My contact email address
+- [E-mail](mailto:matheuspicoli2011@gmail.com) - Meu e-mail de contato

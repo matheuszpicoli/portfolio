@@ -24,7 +24,7 @@ export const projects: Project[] = [
 		id: 2,
 		title: "MP Burger",
 		icon: Icon.Burger,
-		repository: "https://github.com/matheuszpicoli/burguer-place",
+		repository: "https://github.com/matheuszpicoli/burger-place",
 		link: "https://mp-burguer-place.vercel.app/",
 		description: "Um projeto de uma hamburgueria criado com React, Tailwind CSS e JSON Server."
 	},

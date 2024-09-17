@@ -1,22 +1,22 @@
-# Portfólio 📊
+# Portfólio Pessoal 📊
 
-Este é o meu portfólio pessoal, onde coloco minhas principais competências e objetivos.
+Bem-vindo ao meu portfólio pessoal. Aqui, você encontrará uma visão geral das minhas competências, projetos e formas de contato.
 
-### Temos 3 (três) seções:
+## Seções
 
-#### Home
-Nesta seção é onde me apresento e mostro as principais tecnologias e bibliotecas que mais utilizo no meu dia a dia.
+### Home
+Esta seção oferece uma introdução sobre mim, destacando as principais tecnologias e bibliotecas com as quais trabalho regularmente.
 
-#### Projetos
-É aqui que mostro os principais projetos que vejo em destaque, onde dediquei mais horas e fiz muitos commits.
+### Projetos
+Aqui você encontrará uma seleção dos meus projetos mais relevantes, que evidenciam as horas dedicadas e os compromissos realizados.
 
-#### Contato
-Aqui podemos visualizar minhas principais redes sociais profissionais, incluindo meu currículo.
+### Contato
+Nesta seção estão listadas minhas principais redes sociais profissionais e meu currículo para facilitar o contato.
 
 ## Redes Sociais
 
-- [LinkedIn](https://www.linkedin.com/in/matheus-zpicoli) - Meu LinkedIn pessoal
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-zpicoli) Conecte-se comigo no LinkedIn.
 
-- [GitHub](https://github.com/matheuszpicoli) - Meu GitHub
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011?style=for-the-badge&logo=github&logoColor=white)](https://github.com/matheuszpicoli) Acesse meu perfil no GitHub para ver meus projetos.
 
-- [E-mail](mailto:matheuspicoli2011@gmail.com) - Meu e-mail de contato
+[![E-mail](https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:matheuspicoli2011@gmail.com) Entre em contato diretamente pelo e-mail.
